@@ -1,0 +1,35 @@
+
+END-USER LICENSE AGREEMENT (EULA)
+
+IMPORTANT: PLEASE READ THIS END-USER LICENSE AGREEMENT CAREFULLY BEFORE USING THE SOFTWARE.
+This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and [Your Company Name] ("Licensor") for the software product identified above, which includes computer software and may include associated media, printed materials, and "online" or electronic documentation ("Software Product").
+By installing, copying, or otherwise using the Software Product, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install or use the Software Product.
+1. GRANT OF LICENSE.
+   The Licensor grants you a non-exclusive, non-transferable license to use the Software Product under the following terms:
+   (a) You may install and use one copy of the Software Product on a single computer. 
+   (b) You may make one copy of the Software Product for backup and archival purposes only.
+2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS.
+   (a) Limitations on Reverse Engineering, Decompilation, and Disassembly. 
+       You may not reverse engineer, decompile, or disassemble the Software Product, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.
+   (b) Separation of Components.
+       The Software Product is licensed as a single product. Its component parts may not be separated for use on more than one computer.
+   (c) Rental.
+       You may not rent, lease, or lend the Software Product.
+   (d) Software Transfer.
+       You may permanently transfer all of your rights under this EULA, provided you retain no copies, you transfer all of the Software Product (including all component parts, the media and printed materials, any upgrades, this EULA, and, if applicable, the Certificate of Authenticity), and the recipient agrees to the terms of this EULA.
+   (e) Copyright.
+       All title and copyrights in and to the Software Product (including but not limited to any images, photographs, animations, video, audio, music, text, and "applets" incorporated into the Software Product), the accompanying printed materials, and any copies of the Software Product are owned by the Licensor. The Software Product is protected by copyright laws and international treaty provisions. Therefore, you must treat the Software Product like any other copyrighted material.
+3. TERMINATION.
+   Without prejudice to any other rights, the Licensor may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of the Software Product and all of its component parts.
+4. DISCLAIMER OF WARRANTIES.
+   The Licensor expressly disclaims any warranty for the Software Product. The Software Product and any related documentation is provided "as is" without warranty of any kind, either express or implied, including, without limitation, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. The entire risk arising out of use or performance of the Software Product remains with you.
+5. LIMITATION OF LIABILITY.
+   In no event shall the Licensor be liable for any damages (including, without limitation, lost profits, business interruption, or lost information) rising out of your use of or inability to use the Software Product, even if the Licensor has been advised of the possibility of such damages. In no event will the Licensor be liable for any damages in excess of the amount actually paid by you for the Software Product.
+6. GOVERNING LAW.
+   This EULA shall be governed by and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law principles.
+7. ENTIRE AGREEMENT.
+   This EULA constitutes the entire agreement between you and the Licensor relating to the Software Product and supersedes all prior or contemporaneous oral or written communications, proposals, and representations with respect to the Software Product or any other subject matter covered by this EULA.
+By installing or using the Software Product, you acknowledge that you have read this EULA, understand it, and agree to be bound by its terms and conditions.
+
+[ Contact owner at telegramm: @Quriositer ]
+

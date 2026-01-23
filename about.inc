@@ -1,0 +1,245 @@
+section '.data' data readable writeable
+    About_dialogTitle db 'About project',0
+    About_className db 'ImageDialogClass',0
+    About_buttonClass db 'BUTTON',0
+    About_editClass db 'EDIT',0
+    About_okText db 'OK',0
+    About_bmpCaption db 'Use QRCode to GrantMe in ETH',0
+    About_bmpCaption_len = $-About_bmpCaption-1
+    About_hInstance dd ?
+    About_classRegistered dd 0  ; Флаг регистрации класса
+haDialog dd ?
+hImage dd ?
+hEdit dd ?
+hNullBrush dd ?
+hScreenDC dd ?
+pBits dd ?
+hPen dd ?
+DIB_RGB_COLORS = 0
+    align 32
+About_sampleText:
+    file 'about.txt'
+
+section '.bmp' data readable
+align 32
+    bmp_data:
+    file 'sample.bmp'
+
+section '.code' code readable executable
+proc About_ShowDialog hInstance
+    ; Локальные переменные
+    
+    ; Регистрируем класс окна (если еще не зарегистрирован)
+    cmp [About_classRegistered], 0
+    jne .class_registered
+    
+    ; Регистрируем класс
+    invoke LoadIcon,0,IDI_APPLICATION
+    mov [About_wc.hIcon],eax
+    invoke LoadCursor,0,IDC_ARROW
+    mov [About_wc.hCursor],eax
+    
+    mov [About_wc.style], CS_HREDRAW + CS_VREDRAW
+    mov [About_wc.lpfnWndProc], About_WindowProc
+    mov [About_wc.cbClsExtra], 0
+    mov [About_wc.cbWndExtra], 0
+    mov eax, [hInstance]
+    mov [About_wc.hInstance], eax
+    mov [About_wc.hbrBackground], COLOR_BTNFACE + 1
+    mov [About_wc.lpszMenuName], 0
+    mov [About_wc.lpszClassName], About_className
+    
+    invoke RegisterClass,About_wc
+    test eax,eax
+    jz .error
+    
+    mov [About_classRegistered], 1
+    
+.class_registered:
+    ; Создаем окно
+    invoke CreateWindowEx,0,About_className,About_dialogTitle,WS_OVERLAPPED or WS_CAPTION or WS_SYSMENU or WS_MINIMIZEBOX,\
+                         100,100,800,570,NULL,NULL,[hInstance],NULL
+    mov [haDialog],eax
+    test eax,eax
+    jz .error
+    
+    ; Edit control для копирования текста
+    invoke CreateWindowEx,WS_EX_CLIENTEDGE,About_editClass,About_sampleText,\
+                         WS_VISIBLE+WS_CHILD+ES_MULTILINE+ES_READONLY,\
+                         300,20,470,500,[haDialog],2,[hInstance],NULL
+    mov [hEdit],eax
+    
+    ; Кнопка OK
+    invoke CreateWindowEx,0,About_buttonClass,About_okText,WS_VISIBLE+WS_CHILD+BS_DEFPUSHBUTTON,\
+                         25,400,250,30,[haDialog],1,[hInstance],NULL
+    
+    ; Загружаем картинку из встроенных данных
+    stdcall LoadEmbeddedBMP
+    test eax, eax
+    jz .error
+    
+    ; Создаем пустую кисть для рамки
+    invoke GetStockObject,NULL_BRUSH
+    mov [hNullBrush],eax
+    
+    ; Сохраняем указатели в свойствах окна
+;    invoke SetWindowLong, [haDialog], 0, [hImage]
+;    invoke SetWindowLong, [haDialog], 4, [hNullBrush]
+    
+    ; Показываем окно
+    invoke ShowWindow,[haDialog],SW_SHOW
+    invoke UpdateWindow,[haDialog]
+    
+    ; Цикл сообщений для этого окна
+    .msg_loop:
+        invoke GetMessage,About_msg,0,0,0
+        cmp eax,0
+        jle .exit_loop
+        
+        invoke TranslateMessage,About_msg
+        invoke DispatchMessage,About_msg
+        jmp .msg_loop
+    
+    .exit_loop:
+    
+    ; Освобождаем ресурсы
+    cmp [hImage],0
+    je .no_delete
+    invoke DeleteObject,[hImage]
+    .no_delete:
+    
+    mov eax, [About_msg.wParam] ; возвращаем результат
+    ret
+    
+.error:
+    xor eax, eax
+    ret
+endp
+proc LoadEmbeddedBMP
+    ; Проверяем сигнатуру BMP
+    mov esi, bmp_data
+    cmp word [esi], 'BM'
+    jne .error
+
+    ; Получаем DC экрана
+    invoke GetDC, 0
+    mov [hScreenDC], eax
+
+    ; Создаем DIB секцию
+    invoke CreateDIBSection, [hScreenDC], bmp_data+14, DIB_RGB_COLORS, pBits, 0, 0
+    mov [hImage], eax
+    test eax, eax
+    jz .error_dc
+
+    ; Копируем и конвертируем данные из BGR в RGB
+    mov esi, bmp_data+54  ; исходные данные (BGR)
+    mov edi, [pBits]            ; целевой буфер (RGB)
+    mov ecx, 256*256            ; количество пикселей
+
+.convert_loop:
+    ; Читаем BGR
+    mov al, [esi+2]  ; Красный
+    mov bl, [esi+1]  ; Зеленый
+    mov dl, [esi+0]  ; Синий
+
+    ; Записываем RGB
+    mov [edi+2], al  ; Красный
+    mov [edi+1], bl  ; Зеленый
+    mov [edi+0], dl  ; Синий
+
+    add esi, 3
+    add edi, 3
+    loop .convert_loop
+
+    invoke ReleaseDC, 0, [hScreenDC]
+    mov eax, 1 ; успех
+    ret
+
+.error_dc:
+    invoke ReleaseDC, 0, [hScreenDC]
+.error:
+    xor eax, eax ; ошибка
+    ret
+endp
+proc About_WindowProc hwnda,uMsg,wParam,lParam
+    ; Локальные переменные
+    
+    cmp [uMsg],WM_CREATE
+    je .wm_create
+    cmp [uMsg],WM_PAINT
+    je .wm_paint
+    cmp [uMsg],WM_COMMAND
+    je .wm_command
+    cmp [uMsg],WM_DESTROY
+    je .wm_destroy
+    
+    jmp .defwndproc
+
+.wm_create:
+    jmp .finish
+
+.wm_paint:
+    invoke BeginPaint,[hwnda],About_ps
+    ; Рисуем рамку для картинки 256x256
+    invoke CreatePen,PS_SOLID,1,000000h  ; Черная рамка
+    mov [hPen],eax
+    invoke SelectObject,[About_ps.hdc],[hPen]
+    invoke SelectObject,[About_ps.hdc],[hNullBrush]
+    
+    ; Получаем кисть из свойств окна
+;    invoke GetWindowLong, [hwnda], 4
+;    invoke SelectObject,[About_ps.hdc],eax
+    
+    invoke Rectangle,[About_ps.hdc],20,20,276,276
+    
+    ; Получаем картинку из свойств окна
+;    invoke GetWindowLong, [hwnda], 0
+;    cmp eax, 0
+	cmp [hImage],0
+    je .no_image
+    
+    ; Если картинка загружена, отображаем ее
+    invoke CreateCompatibleDC,[About_ps.hdc]
+    mov [hMemDC],eax
+;    invoke GetWindowLong, [hwnda], 0
+    invoke SelectObject,[hMemDC],[hImage]
+    invoke BitBlt,[About_ps.hdc],21,21,255,255,[hMemDC],0,0,SRCCOPY
+    invoke DeleteDC,[hMemDC]
+    
+.no_image:
+    ; Подпись под картинкой
+    invoke SetBkMode,[About_ps.hdc],TRANSPARENT
+    invoke TextOut,[About_ps.hdc],50,285,About_bmpCaption,About_bmpCaption_len
+    
+    invoke DeleteObject,[hPen]
+    invoke EndPaint,[hwnda],About_ps
+    jmp .finish
+
+.wm_command:
+    mov eax,[wParam]
+    cmp ax,1  ; ID кнопки OK
+    jne .finish
+    ; Закрываем окно
+    invoke DestroyWindow,[hwnda]
+    jmp .finish
+
+.wm_destroy:
+    ; Завершаем цикл сообщений
+    invoke PostQuitMessage,0
+    jmp .finish
+
+.defwndproc:
+    invoke DefWindowProc,[hwnda],[uMsg],[wParam],[lParam]
+    ret
+
+.finish:
+    xor eax,eax
+    ret
+endp
+
+section '.wc' data readable writeable
+    About_wc WNDCLASS
+section '.msg' data readable writeable
+    About_msg MSG
+section '.ps' data readable writeable
+    About_ps PAINTSTRUCT
