@@ -158,35 +158,22 @@ invoke SetWindowPos,[hwnddlg],0,[windowX],[windowY],0,0,SWP_NOSIZE or SWP_NOZORD
     mov [hMutexXF], eax
         invoke CreateMutex, 0, FALSE, 0
     mov [hMutexXG], eax
-
- 
         invoke GetDlgItem,[hwnddlg],ID_PROGRESS
-        mov [hProgress],eax
-		
+        mov [hProgress],eax		
     mov eax, [hwnddlg]
     mov [hDialog], eax
 	mov [hwnd], eax
-
     invoke GetDlgItem, [hwnddlg], ID_LISTBOX 
     mov [hListBox], eax
-
-   
     invoke GetDlgItem,[hwnddlg],ID_MESSAGE
-    mov [hTEdit],eax
-    
-    
+    mov [hTEdit],eax 
     invoke DragAcceptFiles,[hwnddlg],TRUE
  invoke WaitForSingleObject, [hMutexX], 10	
    mov byte[syncro],  3 
    mov byte[srvmode], 1
    mov byte[srvmsg],  1 
    mov [startKeep],   1
-invoke ReleaseMutex, hMutexX
-        
-    
-
-    
-    
+invoke ReleaseMutex, hMutexX 
 invoke WaitForSingleObject, [hMutexXC], 10
     invoke CheckDlgButton, [hwnddlg], ID_CHECKBOX, BST_UNCHECKED
     invoke SendDlgItemMessage, [hwnddlg], ID_PORT, EM_LIMITTEXT, 5, 0
@@ -199,23 +186,14 @@ invoke GetDlgItemText, [hwnddlg], ID_PORT, portstart_buffer, 5
     invoke SetDlgItemText, [hwnddlg], ID_USERTO, target_nick_buffer
         invoke GetDlgItemText, [hwnddlg], ID_USER, Name1_SAVE, 32
         invoke GetDlgItemText, [hwnddlg], ID_USERTO, Name2_SAVE, 32
-
         invoke SendMessage,[hProgress],PBM_SETRANGE,0,65535 shl 16
         invoke SendMessage,[hProgress],PBM_SETPOS,[Progress],0
-invoke ReleaseMutex, hMutexXC
-
-
-        
-        
+invoke ReleaseMutex, hMutexXC    
     invoke GetDlgItemText, [hwnddlg], ID_IPSET, stringAddr, 16
-    
-    
-
     invoke CreateThread, 0, 0, timer_thread, [hwnddlg], 0, timer_thread_id
         mov [hTimerThread], eax         
         invoke Sleep, 100
 invoke SetThreadAffinityMask, [hTimerThread], 1
-
         invoke CreateDialogParam, [hInstance], 38, 0, DebugDialogProc, 0
     mov [hDebugWnd], eax
     invoke CreateThread, 0, 0, DebugDialogProc, [hDebugWnd], 0, thread2_id
@@ -223,42 +201,32 @@ invoke SetThreadAffinityMask, [hTimerThread], 1
         invoke Sleep, 100
 invoke SetThreadAffinityMask, [hDbgWndT], 1
     invoke ShowWindow, [hDebugWnd], SW_SHOW
-	
     invoke CreateThread, 0, 0, init_network, [hwnddlg], 0, thread_id
     mov [hInitThread], eax          
         invoke Sleep, 100
 invoke SetThreadAffinityMask, [hInitThread], 1
-
     invoke CreateThread, 0, 0, MainLoop, [hwnddlg], 0, thread3_id
         mov [FileThread], eax         
         invoke Sleep, 100
 invoke SetThreadAffinityMask, [FileThread], 8
-
     invoke CreateThread, 0, 0, RefreshPB, [hProgress], 0, Refresh_thread_id
         mov [hRefreshThread], eax         
         invoke Sleep, 100
 invoke SetThreadAffinityMask, [hRefreshThread], 1
-
 mov eax,1
     jmp DialogProc.processed
-
-
 DialogProc.wmappupdate:
-
     jmp DialogProc.processed
 ;--
 DialogProc.wmcommand:
     cmp [wparam], BN_CLICKED shl 16 + IDOK
         jne @f
-invoke WaitForSingleObject, [hMutexX], 10
-           
+invoke WaitForSingleObject, [hMutexX], 10 
         mov byte[srvmsg], 1 
         mov byte[syncro], 0                      
-        mov byte[kalive], 0                      
-          
+        mov byte[kalive], 0                            
 invoke ReleaseMutex, hMutexX 
  jmp DialogProc.button
- 
         @@:
    cmp [wparam], BN_CLICKED shl 16 + ID_FILE
    jne @f
@@ -267,12 +235,9 @@ DialogProc.continueL:
         cinvoke wsprintf, mess, filesend, szFileName
         stdcall AddDebugMessage, mess
 invoke WaitForSingleObject, [hMutexX], 10
-        
                 mov byte[srvmsg], 0 
-                mov    [srvmode], 0
-               
-                mov byte[kalive], 1 
-               
+                mov    [srvmode], 0            
+                mov byte[kalive], 1        
 invoke ReleaseMutex, hMutexX
 DialogProc.continueEr:
         @@:
@@ -292,36 +257,27 @@ invoke ReleaseMutex, hMutexXB
         mov byte[syncro], 1  
         mov byte[kalive], 0
         mov [startKeep],  0  
-
         mov [Restart], 1   
 invoke ReleaseMutex, hMutexX
         jmp DialogProc.override    
         @@:
-
     mov eax, [wparam]
     cmp ax, ID_CHECKBOX
     jne @f
-    
     shr eax, 16
     cmp ax, BN_CLICKED
     jne @f
-    
     invoke IsDlgButtonChecked, [hwnddlg], ID_CHECKBOX
     cmp eax, BST_CHECKED
     jne .uncheck
-    
     invoke SetWindowPos, [hwnddlg], HWND_TOPMOST, 0,0,0,0, SWP_NOMOVE+SWP_NOSIZE
     jmp @f
 .uncheck:
-    
     invoke SetWindowPos, [hwnddlg], HWND_NOTOPMOST, 0,0,0,0, SWP_NOMOVE+SWP_NOSIZE
 @@:
-
     jmp DialogProc.processed
 ;--
 DialogProc.wmdo_task: 
-
-
     cmp byte[syncro], 2           
        je @f
     cmp byte[syncro], 0 
@@ -334,13 +290,10 @@ invoke WaitForSingleObject, [hMutexX], 10
 mov byte[kalive], 0
 invoke ReleaseMutex, hMutexX
 jmp DialogProc.send_message
-   jmp DialogProc.processed
-        
+   jmp DialogProc.processed     
 DialogProc.about:
-
 stdcall About_ShowDialog, [hInstance]
     jmp DialogProc.processed           
-
 DialogProc.button: 
 @@:                         
 cmp [comp], 0
@@ -348,21 +301,15 @@ jne @f
 invoke Sleep, 0.1
 jmp @b    
 @@:
-
-.if [srvmode]=0 
-                
+.if [srvmode]=0            
 DialogProc.override: 
-
 invoke WaitForSingleObject, [hMutexXA], 10
 mov [comp],0 
 invoke ReleaseMutex, hMutexXA
-
-
  mov ecx, sizeof.all_nick_buffer
  mov edi, my_nick_buffer
  mov eax, 0
  rep stosb                    
-
 invoke WaitForSingleObject, [hMutexXC], 5
     invoke GetDlgItemText, [hwnddlg], ID_USER, my_nick_buffer, 32
     stdcall strippWRK, my_nick_buffer
@@ -370,7 +317,6 @@ invoke ReleaseMutex, hMutexXC
 invoke WaitForSingleObject, [hMutexXC], 5
     invoke GetDlgItemText, [hwnddlg], ID_USERTO, target_nick_buffer, 32
     stdcall strippWRK, target_nick_buffer
-
 invoke ReleaseMutex, hMutexXC
 invoke WaitForSingleObject, [hMutexXA], 10
 mov [comp],1 
@@ -378,7 +324,6 @@ invoke ReleaseMutex, hMutexXA
 .endif
 ;--
 DialogProc.send_message:
-
 @@:                         
 cmp [comp], 0
 jne @f    
@@ -388,17 +333,14 @@ jmp @b
 invoke WaitForSingleObject, [hMutexXA], 10
 mov [comp],0 
 invoke ReleaseMutex, hMutexXA
-    
     cmp [hSocket], INVALID_SOCKET
     jne @f
     cinvoke wsprintf, mess, buzzy
 invoke WaitForSingleObject, [hMutexXB], 10
     stdcall AddTextToListBox, [hwnddlg], mess, MSG_TYPE_ERROR
 invoke ReleaseMutex, hMutexXB
-
 jmp .endsend
 @@:
-
 cmp byte[kalive],1 
 je @f
 .if byte[syncro]=2
@@ -413,16 +355,13 @@ invoke WaitForSingleObject, [hMutexXC], 10
         invoke GetDlgItemText, [hwnddlg], ID_PORT, portstart_buffer, 5
         stdcall strippWRK, portstart_buffer
 invoke ReleaseMutex, hMutexXC
-
 invoke WaitForSingleObject, [hMutexXC], 5
 invoke GetDlgItemText, [hwnddlg], ID_IPSET, stringAddr, 16
  stdcall strippWRK, stringAddr
 invoke ReleaseMutex, hMutexXC
     invoke GetDlgItemInt, [hwnddlg], ID_PORT, 0, FALSE 
-
 mov [portNumber],eax 
 @@:
-
 .if byte[kalive]<>1 
     invoke WaitForSingleObject, [hMutexXC], 5
         invoke GetDlgItemText, [hwnddlg], ID_MESSAGE, userInput, 1024
