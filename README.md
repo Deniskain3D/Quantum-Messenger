@@ -11,7 +11,7 @@ In the full PRO version, the IP address is obtained by the messenger automatical
 
 The program by default uses port 443, therefore messages must be sent to this port.
 
-    During operation, the program requests the recipient's IP address from the IP address input field.
+During operation, the program requests the recipient's IP address from the IP address input field.
 By default, the address is set to your local machine 127.0.0.1.
     If immediately after launch you simply write a message in the message composition field, it goes to
     the general list, and you receive an echo response, it means
@@ -101,6 +101,7 @@ Changes History:
  - Add send/recv progressbar
 0.4.5
  -  Error corections algoritms added for send receive files. SSE2 optimization implemented!
+
 ---------- in plan:
    - delivery condenced messages for you while you still offline (from server)
    - user online check and keep alive mode for keep channel to waiting you friend session
