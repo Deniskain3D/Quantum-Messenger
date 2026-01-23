@@ -1,0 +1,27 @@
+                                              About project               
+                             -= QUANTUM Messenger v.0.4.5 =-              
+                                                                      
+                     Programm Created by Denis AKA @Quriositer        
+           Please support my create for futher build, bug fixes, more
+                                 functionale and features for you!   
+                                                                              
+ ------------------------------------------------------------------------------------------------------------------
+ In preffered forwardbase ideas:                                              
+                                                                              
+ 0.+ Configuration .ini file                                                  
+ 1.+ Message received popup signal                                            
+ 2. - Message delivery indication                                             
+ 3.+ Realize automatic direct connect with you favorite user                  
+ 4. - Voice call functionality                                                
+ 5.+ File exchange function for send you music pictures                       
+               ...and more for you want`s                                     
+ ------------------------------------------------------------------------------------------------------------------
+               If you like this project,  Please Send your gratitude to:       
+               ==============================================                  
+               ETH: 0x30b221d454D3aF9eC780196117E0d1744D8E1631                 
+               ==============================================                  
+                                                                               
+  Contact me at Telegramm: @Quriositer   Thank You!
+
+
+                                                                                       Supply in 2025.
