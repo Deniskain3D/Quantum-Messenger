@@ -1,28 +1,3 @@
-section '.data' data readable writeable
-    About_dialogTitle db 'About project',0
-    About_className db 'ImageDialogClass',0
-    About_buttonClass db 'BUTTON',0
-    About_editClass db 'EDIT',0
-    About_okText db 'OK',0
-    About_bmpCaption db 'Use QRCode to GrantMe in ETH',0
-    About_bmpCaption_len = $-About_bmpCaption-1
-    About_hInstance dd ?
-    About_classRegistered dd 0  
-haDialog dd ?
-hImage dd ?
-hEdit dd ?
-hNullBrush dd ?
-hScreenDC dd ?
-pBits dd ?
-hPen dd ?
-DIB_RGB_COLORS = 0
-    align 32
-About_sampleText:
-    file 'about.txt'
-section '.bmp' data readable
-align 32
-    bmp_data:
-    file 'sample.bmp'
 section '.code' code readable executable
 proc About_ShowDialog hInstance
     cmp [About_classRegistered], 0
@@ -167,4 +142,5 @@ section '.msg' data readable writeable
     About_msg MSG
 section '.ps' data readable writeable
     About_ps PAINTSTRUCT
+
 
