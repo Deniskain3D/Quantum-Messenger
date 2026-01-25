@@ -70,36 +70,52 @@ Advantages of the QUANTUM Messenger:
  - Code Optimization
  -----------------------------------------------------------------------------------------
 Changes History:
- 0.2.4
+
+0.2.4
 - Enanche interface
- 0.2.5
+
+0.2.5
 - Add send/receive system info (ip:port)
- 0.2.6
+
+0.2.6
  - Interface improvements
- 0.2.7
+
+0.2.7
  - Automatic getting ip:port from you talk-unit on first message received
- 0.2.8
+
+0.2.8
  - Popup window messenger behavior on msg receive
- 0.2.9
+
+0.2.9
  - Add receive message signal
- 0.3.0
+
+0.3.0
  - Work p2p in internet
- 0.3.4
+
+0.3.4
  - Synchronize dynamicaly changed ip addreses in current session
- 0.3.5
+
+0.3.5
  - delivery offline message
- 0.3.6
+
+0.3.6
  - Last message view autofocus and scroll to him
- 0.3.7 
- - interface, text and font improvements (always on top window option, nice readable font, formating message text)
+
+0.3.7 
+ - interface, text and font improvements (always on top option, nice readable font, formating message text)
+
 0.3.8
  - Standart Scrolling mechanism upgraded to Cacheble for rolling bug fixes and better flow
+
 0.3.9
  - Remove some connections lags (need testing stability) plus someone bug fixes and optimizes approved
+
 0.4.0
  - File send/receive functions implemented
+
 0.4.1
  - Add send/recv progressbar
+
 0.4.5
  -  Error corections algoritms added for send receive files. SSE2 optimization implemented!
  -  ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
