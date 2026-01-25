@@ -12,4 +12,4 @@ lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cl
 polar: # Replace with a single Polar username
 buy_me_a_coffee: # Replace with a single Buy Me a Coffee username
 thanks_dev: # Replace with a single thanks.dev username
-custom: ['https://www.blockchain.com/btc/address/14VC2VerySEuFHCzB6NZ5bUvcEMEtpGjUT','https://www.blockchain.com/eth/address/0x30b221d454D3aF9eC780196117E0d1744D8E1631']
+custom: ['https://www.blockchain.com/explorer/addresses/btc/14VC2VerySEuFHCzB6NZ5bUvcEMEtpGjUT','https://www.blockchain.com/explorer/addresses/eth/0x30b221d454D3aF9eC780196117E0d1744D8E1631']
