@@ -102,15 +102,14 @@ Changes History:
  - Add send/recv progressbar
 0.4.5
  -  Error corections algoritms added for send receive files. SSE2 optimization implemented!
+ -  ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
+ -  (for client and server add) user online check and keep alive mode for keep channel to waiting you friend session
+ -  delivery condenced messages for you while you still offline (from server)
 
 ---------- in plan:
-   - delivery condenced messages for you while you still offline (from server)
-   - user online check and keep alive mode for keep channel to waiting you friend session
-   - ini file parse for server port startup
    - chat history local datafile
    - voice message-file send
    - userlist implement/parse data file & restore chat
-   - config options/enable popup,sound
-
+   
  or more...
  
