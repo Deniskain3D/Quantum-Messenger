@@ -95,12 +95,12 @@ proc LoadEmbeddedBMP
     mov edi, [pBits]      
     mov ecx, 256*256   
 .convert_loop:
-    mov al, [esi+2]  ; Êðàñíûé
-    mov bl, [esi+1]  ; Çåëåíûé
-    mov dl, [esi+0]  ; Ñèíèé
-    mov [edi+2], al  ; Êðàñíûé
-    mov [edi+1], bl  ; Çåëåíûé
-    mov [edi+0], dl  ; Ñèíèé
+    mov al, [esi+2]
+    mov bl, [esi+1]
+    mov dl, [esi+0]
+    mov [edi+2], al
+    mov [edi+1], bl
+    mov [edi+0], dl
     add esi, 3
     add edi, 3
     loop .convert_loop
@@ -167,3 +167,4 @@ section '.msg' data readable writeable
     About_msg MSG
 section '.ps' data readable writeable
     About_ps PAINTSTRUCT
+
