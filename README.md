@@ -4,7 +4,7 @@ QUANTUM Messenger Pro 0.4.5
 
 How to use:
 
-In the local base version without a coordination module, you need to find out your собеседник's IP, your own IP, and communicate it to your собеседник for setup.
+In the local base version without a coordination module, you need to find out your собеседник's IP, your own IP, and communicate it to your opponent for setup.
     The messenger in this configuration will only work on local networks, which is convenient for enterprises,
     including for maintaining the confidentiality of work correspondence and preventing data leaks to the external
     network.
