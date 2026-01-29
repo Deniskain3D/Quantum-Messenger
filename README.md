@@ -128,4 +128,35 @@ Changes History:
    - userlist implement/parse data file & restore chat
    
  or more...
+
+ Possible Issues:
+
+    Application window freezes when exiting (can occur before synchronization and/or message exchange)
+    (This happens due to a specific behavior related to timer handling and will be fixed in future versions)
+
+    One client unsuccessfully tries to send messages or a file to another.
+    Cause: Additional port blocking on the network route on the opposite side.
+    Fix: Send a small file and a message from the non-responding side.
+
+    Lack of connection is also possible due to blocking by internet providers.
+    Solution: Use a VPN with support for the UDP protocol.
+
+Installing a coordination server for work outside the local network
+(The server was tested on CentOS 7):
+
+To install, place the serverXX file in the folder /opt/msgserver/.
+Ensure that UDP ports 443 and 4443 are open on the server.
+The server must have a direct (public) IP if it is located on the internet.
+Place the service file in /usr/lib/systemd/system/msgserver.service
+and install it using the commands:
+text
+
+systemctl enable msgserver
+systemctl start msgserver
+
+The service file is also included (attached in the package); other paths can be configured there as well.
+Ensure the server file has execute permissions: chmod 755.
+Upon startup, the server creates two MySQL-format databases in its folder.
+These can be deleted if necessary, after which the server should be restarted.
+The server also enables deferred message delivery by storing messages in the database until they are sent.
  
