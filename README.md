@@ -149,7 +149,6 @@ Ensure that UDP ports 443 and 4443 are open on the server.
 The server must have a direct (public) IP if it is located on the internet.
 Place the service file in /usr/lib/systemd/system/msgserver.service
 and install it using the commands:
-text
 
 systemctl enable msgserver
 systemctl start msgserver
