@@ -150,6 +150,7 @@ Installing a coordination server for work outside the local network
 To install, place the serverXX file in the folder /opt/msgserver/.
 Ensure that UDP ports 443 and 4443 are open on the server.
 The server must have a direct (public) IP if it is located on the internet.
+
 Place the service file in /usr/lib/systemd/system/msgserver.service
 and install it using the commands:
 
@@ -162,5 +163,6 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing messages in the database until they are sent.
  
+
 
 
