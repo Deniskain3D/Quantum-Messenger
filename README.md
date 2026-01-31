@@ -153,8 +153,8 @@ The server must have a direct (public) IP if it is located on the internet.
 Place the service file in /usr/lib/systemd/system/msgserver.service
 and install it using the commands:
 
-systemctl enable msgserver
-systemctl start msgserver
+    systemctl enable msgserver
+    systemctl start msgserver
 
 The service file is also included (attached in the package); other paths can be configured there as well.
 Ensure the server file has execute permissions: chmod 755.
@@ -162,4 +162,5 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing messages in the database until they are sent.
  
+
 
