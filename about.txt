@@ -1,5 +1,5 @@
                                               About project               
-                             -= QUANTUM Messenger v.0.4.5 =-              
+                             -= QUANTUM Messenger v.0.4.6 =-              
                                                                       
                      Programm Created by Denis AKA @Quriositer        
            Please support my create for futher build, bug fixes, more
@@ -18,11 +18,11 @@
  ------------------------------------------------------------------------------------------------------------------
                If you like this project,  Please Send your gratitude to:       
                ==============================================                  
-               ETH: 0x30b221d454D3aF9eC780196117E0d1744D8E1631                 
+               ETH: 0x30b221d454D3aF9eC780196117E0d1744D8E1631
+               BTC: 14VC2VerySEuFHCzB6NZ5bUvcEMEtpGjUT			   
                ==============================================                  
-                                                                               
-  Contact me at Telegram: @Quriositer   Thank You!
-
+  Project live at https://github.com/Deniskain3D/Quantum-Messenger
+  Contact me at Telegram: @Quriositer
+  
 
                                                                                        Supply in 2026.
-
