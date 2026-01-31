@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.4.5
+QUANTUM Messenger Pro 0.4.6
 ------------------------------------------------------------------------------------------------------
 
 How to use:
@@ -121,6 +121,8 @@ Changes History:
  -  ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
  -  (for client and server add) user online check and keep alive mode for keep channel to waiting you friend session
  -  delivery condenced messages for you while you still offline (from server)
+0.4.6
+ -  Some optimization and stability filesend issues fix
 
 ---------- in plan:
    - chat history local datafile
