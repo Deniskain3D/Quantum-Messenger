@@ -124,6 +124,7 @@ Changes History:
 
 0.4.6
  -  Some optimization and stability filesend issues fix
+
 0.4.7
  -  Bug fix, filesend stability improving
 
@@ -164,3 +165,4 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing messages in the database until they are sent.
  
+
