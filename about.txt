@@ -1,5 +1,5 @@
                                               About project               
-                             -= QUANTUM Messenger v.0.4.6 =-              
+                             -= QUANTUM Messenger v.0.4.8 =-              
                                                                       
                      Programm Created by Denis AKA @Quriositer        
            Please support my create for futher build, bug fixes, more
