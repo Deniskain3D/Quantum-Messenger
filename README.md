@@ -8,8 +8,8 @@ In the local base version without a coordination module, you need to find out yo
     The messenger in this configuration will only work on local networks, which is convenient for enterprises,
     including for maintaining the confidentiality of work correspondence and preventing data leaks to the external
     network.
-In the full PRO version, the IP address is obtained by the messenger automatically during synchronization and connection with another user.
-
+In the full PRO version, the IP address is obtained by the messenger automatically during synchronization and connection with another user
+(sincle now you may use simple or pro pack whorewer you want, all this include there.)
 The program by default uses port 443, therefore messages must be sent to this port.
 
 During operation, the program requests the recipient's IP address from the IP address input field.
@@ -22,7 +22,7 @@ If you are working on a local network, you need to specify the recipient's IP ad
 messages will be sent to this IP address.
     If you have synchronized with the server and the second user is offline, then in the message field,
 upon sending, a note will appear stating that the message has been saved for the user on the server.
-In the general field, messages from your собеседников will appear.
+In the general field, messages from your recepient`s will appear.
     After closing the program, the IP, PORT, and Username settings are saved in the configuration file,
     and are loaded from the config upon the next launch.
 
@@ -34,7 +34,7 @@ Advantages of the QUANTUM Messenger:
 
   1. The messenger is absolutely clean and honest, only direct connections.
 
-  2. No service information is transmitted anywhere except to your собеседник's client.
+  2. No service information is transmitted anywhere except to your recepient's client.
 
   3. The messenger takes up mere kilobytes; there is no extra or spyware functionality at all.
 
@@ -169,3 +169,4 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing messages in the database until they are sent.
  
+
