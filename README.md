@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.4.7
+QUANTUM Messenger Pro 0.4.8
 ------------------------------------------------------------------------------------------------------
 
 How to use:
@@ -128,6 +128,10 @@ Changes History:
 0.4.7
  -  Bug fix, filesend stability improving
 
+0.4.8
+ - Many small changes emproves, stables and fixes for filexchange (add some retryes, etc.)
+   add logout info about this
+   
 ---------- in plan:
    - chat history local datafile
    - voice message-file send
@@ -165,4 +169,3 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing messages in the database until they are sent.
  
-
