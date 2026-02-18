@@ -76,72 +76,53 @@ Advantages of the QUANTUM Messenger:
  -----------------------------------------------------------------------------------------
 Changes History:
 
-0.2.4
-- Enanche interface
+0.2.4 - Enanche interface
 
-0.2.5
-- Add send/receive system info (ip:port)
+0.2.5 - Add send/receive system info (ip:port)
 
-0.2.6
- - Interface improvements
+0.2.6 - Interface improvements
 
-0.2.7
- - Automatic getting ip:port from you talk-unit on first message received
+0.2.7 - Automatic getting ip:port from you talk-unit on first message received
 
-0.2.8
- - Popup window messenger behavior on msg receive
+0.2.8 - Popup window messenger behavior on msg receive
 
-0.2.9
- - Add receive message signal
+0.2.9 - Add receive message signal
 
-0.3.0
- - Work p2p in internet
+0.3.0 - Work p2p in internet
 
-0.3.4
- - Synchronize dynamicaly changed ip addreses in current session
+0.3.4 - Synchronize dynamicaly changed ip addreses in current session
 
-0.3.5
- - delivery offline message
+0.3.5 - delivery offline message
 
-0.3.6
- - Last message view autofocus and scroll to him
+0.3.6 - Last message view autofocus and scroll to him
 
-0.3.7 
- - interface, text and font improvements (always on top option, nice readable font, formating message text)
+0.3.7 - interface, text and font improvements (always on top option, nice readable font, formating message text)
 
-0.3.8
- - Standart Scrolling mechanism upgraded to Cacheble for rolling bug fixes and better flow
+0.3.8 - Standart Scrolling mechanism upgraded to Cacheble for rolling bug fixes and better flow
 
-0.3.9
- - Remove some connections lags (need testing stability) plus someone bug fixes and optimizes approved
+0.3.9 - Remove some connections lags (need testing stability) plus someone bug fixes and optimizes approved
 
-0.4.0
- - File send/receive functions implemented
+0.4.0 - File send/receive functions implemented
 
-0.4.1
- - Add send/recv progressbar
+0.4.1 - Add send/recv progressbar
 
-0.4.5
- -  Error corections algoritms added for send receive files. SSE2 optimization implemented!
- -  ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
- -  (for client and server add) user online check and keep alive mode for keep channel to waiting you friend session
- -  delivery condenced messages for you while you still offline (from server)
+0.4.5 - Error corections algoritms added for send receive files. SSE2 optimization implemented!
+		ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
+		(for client and server add) user online check and keep alive mode for keep channel to waiting you friend session
+		delivery condenced messages for you while you still offline (from server)
 
-0.4.6
- -  Some optimization and stability filesend issues fix
+0.4.6 -  Some optimization and stability filesend issues fix
 
-0.4.7
- -  Bug fix, filesend stability improving
+0.4.7 -  Bug fix, filesend stability improving
 
-0.4.8
- - Many small changes emproves, stables and fixes for filexchange (add some retryes, etc.)
-   add logout info about this
+0.4.8 - Many small changes emproves, stables and fixes for filexchange (add some retryes, etc.)
+        add logout info about this
    
-0.5.0
- - optimizes/bugfix
- - add protection for missing mirror traffic received
+0.5.0 - optimizes/bugfix
+        add protection for missing mirror traffic received
 
 ---------- in plan:
+
    - chat history local datafile
    - voice message-file send
    - userlist implement/parse data file & restore chat
@@ -186,6 +167,7 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
  
+
 
 
 
