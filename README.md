@@ -164,8 +164,10 @@ Changes History:
 Installing a coordination server for work outside the local network
 (The server was tested on CentOS 7):
 
-To install, place the serverXX file in the folder /opt/msgserver/.
+To install, place the serverXX file in the folder '/opt/msgserver/'
+
 install python 3.x if not you not have
+
 (for centOS: sudo yum install python3)
 
 Ensure that UDP ports 443 and 4443 are open on the server.
@@ -175,6 +177,7 @@ For permanent server runwork, modify at you own and place 'msgserver.service' te
 to '/usr/lib/systemd/system/' and install it using the commands:
 
 systemctl enable msgserver
+
 systemctl start msgserver
 
 The service file is also included (attached in the package); other paths can be configured there as well.
@@ -183,6 +186,7 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
  
+
 
 
 
