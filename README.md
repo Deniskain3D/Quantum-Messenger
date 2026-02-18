@@ -139,6 +139,7 @@ Changes History:
 0.5.0
  - optimizes/bugfix
  - add protection for missing mirror traffic received
+
 ---------- in plan:
    - chat history local datafile
    - voice message-file send
@@ -178,3 +179,4 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
  
+
