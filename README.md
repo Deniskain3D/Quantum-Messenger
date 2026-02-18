@@ -1,16 +1,18 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.4.8 (stable)
+QUANTUM Messenger Pro 0.5.0 (stable)
 ------------------------------------------------------------------------------------------------------
 
 How to use:
 
-In the local base version without a coordination module, you need to find out your opponent's IP, your own IP, and communicate it to your opponent for setup.
+In the local base version without a coordination module, you need to find out your opponent's IP, your
+    own IP, and communicate it to your opponent for setup.
     The messenger in this configuration will only work on local networks, which is convenient for enterprises,
-    including for maintaining the confidentiality of work correspondence and preventing data leaks to the external
-    network.
-In the full PRO version, the IP address is obtained by the messenger automatically during synchronization and connection with another user
-(sincle now you may use simple or pro pack whorewer you want, all this include there.)
-The program by default uses port 443, therefore messages must be sent to this port.
+    including for maintaining the confidentiality of work correspondence and preventing data leaks to the
+	external network.
+In the PRO version, the IP address is obtained by the messenger automatically during synchronization and
+    connection with another user
+    (sincle now you may use simple or pro pack whorewer you want, all this include there.)
+    The program by default uses port 443, therefore messages must be sent to this port.
 
 During operation, the program requests the recipient's IP address from the IP address input field.
 By default, the address is set to your local machine 127.0.0.1.
@@ -22,11 +24,13 @@ If you are working on a local network, you need to specify the recipient's IP ad
 messages will be sent to this IP address.
     If you have synchronized with the server and the second user is offline, then in the message field,
 upon sending, a note will appear stating that the message has been saved for the user on the server.
-In the general field, messages from your recepient`s will appear.
+In the general field, messages from your recipient's will appear.
     After closing the program, the IP, PORT, and Username settings are saved in the configuration file,
     and are loaded from the config upon the next launch.
 
-For the program to work, simply allow network access in the firewall during the first launch.
+For localnet fileexchange (without server) check for you and your pair have symetrical fileport use in qset.ini file
+
+For the first start program, simply allow network access in the firewall during launch.
 
 Advantages of the QUANTUM Messenger:
 ------------------------------------------------------------------------------------------------------
@@ -34,7 +38,7 @@ Advantages of the QUANTUM Messenger:
 
   1. The messenger is absolutely clean and honest, only direct connections.
 
-  2. No service information is transmitted anywhere except to your recepient's client.
+  2. No service information is transmitted anywhere except to your recipient's client.
 
   3. The messenger takes up mere kilobytes; there is no extra or spyware functionality at all.
 
@@ -132,16 +136,19 @@ Changes History:
  - Many small changes emproves, stables and fixes for filexchange (add some retryes, etc.)
    add logout info about this
    
+0.5.0
+ - optimizes/bugfix
+ - add protection for missing mirror traffic received
 ---------- in plan:
    - chat history local datafile
    - voice message-file send
    - userlist implement/parse data file & restore chat
    
  or more...
-
+------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
-    Application window freezes when exiting (can occur before synchronization and/or message exchange)
+    Application window may have freezes when exiting (can occur before synchronization and/or message exchange)
     (This happens due to a specific behavior related to timer handling and will be fixed in future versions)
 
     One client unsuccessfully tries to send messages or a file to another.
@@ -151,14 +158,16 @@ Changes History:
     Lack of connection is also possible due to blocking by internet providers.
     Solution: Use a VPN with support for the UDP protocol.
 
+------------------------------------------------------------------------------------------------------------------
 Installing a coordination server for work outside the local network
 (The server was tested on CentOS 7):
 
 To install, place the serverXX file in the folder /opt/msgserver/.
 Ensure that UDP ports 443 and 4443 are open on the server.
 The server must have a direct (public) IP if it is located on the internet.
-Place the service file in /usr/lib/systemd/system/msgserver.service
-and install it using the commands:
+This address and server ports must be writen in client's qset.ini configuration file
+For permanent server runwork, modify at you own and place 'msgserver.service' template file
+to '/usr/lib/systemd/system/' and install it using the commands:
 
 systemctl enable msgserver
 systemctl start msgserver
@@ -167,7 +176,5 @@ The service file is also included (attached in the package); other paths can be 
 Ensure the server file has execute permissions: chmod 755.
 Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
-The server also enables deferred message delivery by storing messages in the database until they are sent.
+The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
  
-
-
