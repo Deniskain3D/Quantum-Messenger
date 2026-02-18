@@ -2,6 +2,7 @@
 QUANTUM Messenger Pro 0.5.0 (stable)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
+
 How to use:
 
 In the local base version without a coordination module, you need to find out your opponent's IP, your
@@ -179,5 +180,6 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
  
+
 
 
