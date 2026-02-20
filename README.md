@@ -147,7 +147,7 @@ Installing a coordination server for work outside the local network
 
 To install, place the serverXX file in the folder '/opt/msgserver/'
 
-install python 3.x if not you not have
+install python 3.x if you not have
 
 (for centOS: sudo yum install python3)
 
@@ -167,6 +167,7 @@ Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
  
+
 
 
 
