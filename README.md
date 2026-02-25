@@ -1,5 +1,5 @@
-------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.1 (alpha)
+---------------------------------------------------------------------------------------------
+QUANTUM Messenger Pro 0.5.2 (alpha)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -122,6 +122,9 @@ Changes History:
         add protection for missing mirror traffic received
 
 0.5.1 - improved cryptografy and stability make better baselogic architecture
+
+0.5.2 - add message and filesend supples from other side with indication /some fixes
+
 
 ---------- in plan:
 
