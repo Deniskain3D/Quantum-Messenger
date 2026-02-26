@@ -1,8 +1,9 @@
 0.5.2
 Client:
 quantum.exe
-MD5        :8a248b55c0362e07decc020a9b7e4fc3
-SHA1       :1016b128749e2396b2a2edf133b993ab9a256a78
+MD5        :530684bdb76766fbf4031a93105d5f7b
+SHA1       :9a8d718675484555a39dec958c42a10ad0b6ac85
+
 
 Server:
 server33
