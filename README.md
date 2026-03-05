@@ -1,5 +1,5 @@
----------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.2 (alpha)
+------------------------------------------------------------------------------------------------------
+QUANTUM Messenger Pro 0.5.3 (alpha)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -125,9 +125,11 @@ Changes History:
 
 0.5.2 - add message and filesend supples from other side with indication /some fixes
 
+0.5.3 - change delivery indicator to star symbol / bugfix /optimizes
 
 ---------- in plan:
-
+0.5.4 - add check for correct message delivery (red/green star-color)
+0.5.5 - filesend deeper error corection
    - chat history local datafile
    - voice message-file send
    - userlist implement/parse data file & restore chat
