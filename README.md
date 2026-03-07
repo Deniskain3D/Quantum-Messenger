@@ -107,9 +107,9 @@ Changes History:
 0.4.1 - Add send/recv progressbar
 
 0.4.5 - Error corections algoritms added for send receive files. SSE2 optimization implemented!
-		ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
-		(for client and server add) user online check and keep alive mode for keep channel to waiting you friend session
-		delivery condenced messages for you while you still offline (from server)
+		Ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
+		For client and server - add user online check and keep alive mode for keep channel to waiting
+		you friend session. Delivery condenced messages for you while you still offline (from server)
 
 0.4.6 -  Some optimization and stability filesend issues fix
 
@@ -140,8 +140,10 @@ Changes History:
 ------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
-    Application window may have freezes when exiting (can occur before synchronization and/or message exchange)
-    (This happens due to a specific behavior related to timer handling and will be fixed in future versions)
+    Application window may have freezes and loose control when start and exiting
+	(can occur if you wait too many time before first synchronization and/or message exchange)
+    (This happens due to a specific behavior related to timer handling and will be fixed
+	in future versions). For fix it restart messenger and make some connection first time.
 
     One client unsuccessfully tries to send messages or a file to another.
     Cause: Additional port blocking on the network route on the opposite side.
@@ -175,5 +177,3 @@ Ensure the server file has execute permissions: chmod 755.
 Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
-
-
