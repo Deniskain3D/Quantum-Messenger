@@ -107,7 +107,7 @@ Changes History:
 0.4.1 - Add send/recv progressbar
 
 0.4.5 - Error corections algoritms added for send receive files. SSE2 optimization implemented!
-		Ini file parse for configure and load server adresses/ports/lastlogins on startup messenger
+		Ini file parse for configure and load server adresses/ports/lastlogins on startup messenger.
 		For client and server - add user online check and keep alive mode for keep channel to waiting
 		you friend session. Delivery condenced messages for you while you still offline (from server)
 
@@ -177,3 +177,4 @@ Ensure the server file has execute permissions: chmod 755.
 Upon startup, the server creates two MySQL-format databases in its folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
+
