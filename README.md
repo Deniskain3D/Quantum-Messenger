@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.4 (alpha)
+QUANTUM Messenger Pro 0.5.4 (beta)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -127,7 +127,7 @@ Changes History:
 
 0.5.3 - change delivery indicator to star symbol / bugfix /optimizes
 
-0.5.4 - add check for correct message delivery (red/green star-color)
+0.5.4 - add check for correct message delivery (red/green star-color),fix focus loose on textarea after some actions, fix some displaying text bugs
 
 ---------- in plan:
 
