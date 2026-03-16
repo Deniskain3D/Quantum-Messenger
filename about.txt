@@ -10,7 +10,7 @@
                                                                               
  0.+ Configuration .ini file                                                  
  1.+ Message received popup signal                                            
- 2. - Message delivery indication                                             
+ 2.+ Message delivery indication                                             
  3.+ Realize automatic direct connect with you favorite user                  
  4. - Voice call functionality                                                
  5.+ File exchange function for send you music pictures                       
