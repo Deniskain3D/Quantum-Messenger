@@ -129,7 +129,7 @@ Changes History:
 
 0.5.4 - add check for correct message delivery (red/green star-color)
 
-0.5.5 - filesend deeper error corection
+0.5.5 - filesend deeper error correction / small bugfixes
 
 ---------- in plan:
 
