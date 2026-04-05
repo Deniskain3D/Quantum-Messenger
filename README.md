@@ -129,12 +129,12 @@ Changes History:
 
 0.5.4 - add check for correct message delivery (red/green star-color)
 
-0.5.5 - filesend deeper error correction / small bugfixes
+0.5.5 - filesend deeper error correction / add listbox message clipboard /textinput bugfix 
 
 ---------- in plan:
 
-   - chat history local datafile
    - voice message-file send
+   - chat history local datafile
    - userlist implement/parse data file & restore chat
    
  or more...
