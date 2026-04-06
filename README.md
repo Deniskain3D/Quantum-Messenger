@@ -129,7 +129,8 @@ Changes History:
 
 0.5.4 - add check for correct message delivery (red/green star-color)
 
-0.5.5 - filesend deeper error correction / add listbox message clipboard /textinput bugfix 
+0.5.5 - filesend deeper error correction / add listbox message clipboard/
+        add reply function / textinput bugfix /compact delivery-star to lastmsg
 
 ---------- in plan:
 
