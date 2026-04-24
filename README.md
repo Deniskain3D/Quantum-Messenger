@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.5 (stable)
+QUANTUM Messenger Pro 0.5.5 (alpha)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -131,7 +131,7 @@ Changes History:
 
 0.5.5 - filesend deeper error correction / add listbox message clipboard/
         add reply function / textinput bugfix /compact delivery-star to lastmsg/
-		add more text formating accuracy
+		add more text formating accuracy / fix mem alloc interface freeze across separate thread
 
 ---------- in plan:
 
