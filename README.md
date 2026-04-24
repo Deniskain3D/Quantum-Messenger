@@ -147,7 +147,8 @@ Changes History:
     Application window may have freezes and loose control when restart in current aproved p2p session
 	(can occur if you receive ping from parthner before first synchronization and/or message exchange)
     (This happens due to a specific behavior related to timer handling and will be fixed
-	in future versions). For fix it restart messenger and make some connection first time.
+	in future versions). For complete it, restart messenger and make some connection first time or send any message
+	to current ip before you receive external ping.
 
     One client unsuccessfully tries to send messages or a file to another.
     Cause: Additional port blocking on the network route on the opposite side.
