@@ -10,6 +10,7 @@ In the local base version without a coordination module, you need to find out yo
     The messenger in this configuration will only work on local networks, which is convenient for enterprises,
     including for maintaining the confidentiality of work correspondence and preventing data leaks to the
 	external network.
+	(Actualy you may have internet connection if one of you pair have static external IP)
 In the PRO version, the IP address is obtained by the messenger automatically during synchronization and
     connection with another user
     (sincle now you may use simple or pro pack whorewer you want, all this include there.)
@@ -143,8 +144,8 @@ Changes History:
 ------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
-    Application window may have freezes and loose control when start and exiting
-	(can occur if you wait too many time before first synchronization and/or message exchange)
+    Application window may have freezes and loose control when restart in current aproved p2p session
+	(can occur if you receive ping from parthner before first synchronization and/or message exchange)
     (This happens due to a specific behavior related to timer handling and will be fixed
 	in future versions). For fix it restart messenger and make some connection first time.
 
