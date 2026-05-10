@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.5 (stable)
+QUANTUM Messenger Pro 0.5.6 (beta)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -134,9 +134,10 @@ Changes History:
         add reply function / textinput bugfix /compact delivery-star to lastmsg/
 		add more text formating accuracy / fix mem alloc interface freeze across separate thread
 
+0.5.6 - voice message function added / ole and some other small bug fix
+
 ---------- in plan:
 
-   - voice message-file send
    - chat history local datafile
    - userlist implement/parse data file & restore chat
    

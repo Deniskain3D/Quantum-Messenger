@@ -1,5 +1,5 @@
                                               About project               
-                             -= QUANTUM Messenger v.0.5.4 =-              
+                             -= QUANTUM Messenger v.0.5.6 =-              
                                                                       
                      Programm Created by Denis AKA @Quriositer        
            Please support my create for futher build, bug fixes, more
@@ -12,7 +12,7 @@
  1.+ Message received popup signal                                            
  2.+ Message delivery indication                                             
  3.+ Realize automatic direct connect with you favorite user                  
- 4. - Voice call functionality                                                
+ 4.+ Voice call functionality                                                
  5.+ File exchange function for send you music pictures                       
                ...and more for you want`s                                     
  ------------------------------------------------------------------------------------------------------------------
