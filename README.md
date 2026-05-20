@@ -72,6 +72,7 @@ Advantages of the QUANTUM Messenger:
 
         Minimum system requirements: CPU Pentium 32 Bit, 512 MB RAM, WindowsXP
 ----------------------------------------------------------------------------------------- 
+ - New Features
  - Bug fixes
  - Code Optimization
  -----------------------------------------------------------------------------------------
@@ -134,7 +135,7 @@ Changes History:
         add reply function / textinput bugfix /compact delivery-star to lastmsg/
 		add more text formating accuracy / fix mem alloc interface freeze across separate thread
 
-0.5.6 - voice message function added / ole and some other small bug fix
+0.5.6 - voice message function added / ole and some other small bug fix / begin adding graphics to buttons
 
 ---------- in plan:
 
