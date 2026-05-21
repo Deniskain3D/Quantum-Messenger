@@ -135,7 +135,7 @@ Changes History:
         add reply function / textinput bugfix /compact delivery-star to lastmsg/
 		add more text formating accuracy / fix mem alloc interface freeze across separate thread
 
-0.5.6 - voice message function added / ole and some other small bug fix / begin adding graphics to buttons
+0.5.6 - voice message function added / ole and some other small bug fix / add buton icons
 
 ---------- in plan:
 
