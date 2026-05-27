@@ -142,6 +142,7 @@ Changes History:
 
    - chat history local datafile
    - userlist implement/parse data file & restore chat
+   - video call's
    
  or some more...
 ------------------------------------------------------------------------------------------------------------------
