@@ -70,7 +70,8 @@ Advantages of the QUANTUM Messenger:
         If you wish to support the author for future improvements,
         payment details and contact information are in the About section.
 
-        Minimum system requirements: CPU Pentium IV(with sse2), 512 MB RAM, WindowsXP32
+  Minimum system requirements:
+  CPU Pentium IV(32bit Willamette core with SSE2 instructions), 512 MB RAM, WindowsXP32
 ----------------------------------------------------------------------------------------- 
  - New Features
  - Bug fixes
@@ -137,12 +138,12 @@ Changes History:
 
 0.5.6 - voice message function added / ole and some other small bug fix / add buton icons
 
----------- in plan:
+---------- in plan i think made or not:
 
    - chat history local datafile
    - userlist implement/parse data file & restore chat
    
- or more...
+ or some more...
 ------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
