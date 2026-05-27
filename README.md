@@ -188,6 +188,6 @@ systemctl start msgserver
 
 The service file is also included (attached in the package); other paths can be configured there as well.
 Ensure the server file has execute permissions: chmod 755.
-Upon startup, the server creates two MySQL-format databases in its folder.
+Upon startup, the server creates two MySQL-format databases in serverfile folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
