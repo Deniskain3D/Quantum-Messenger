@@ -165,6 +165,8 @@ Installing a coordination server for work outside the local network
 
 To install, place the serverXX file in the folder '/opt/msgserver/'
 
+install MariaDB or some MySQL compatible DB
+
 install python 3.x if you not have
 
 (for centOS: sudo yum install python3)
