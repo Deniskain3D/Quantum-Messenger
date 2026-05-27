@@ -23,12 +23,14 @@ By default, the address is set to your local machine 127.0.0.1.
     the program is operational.
 
 If you are working on a local network, you need to specify the recipient's IP address in the field, after which
-messages will be sent to this IP address.
-    If you have synchronized with the server and the second user is offline, then in the message field,
-upon sending, a note will appear stating that the message has been saved for the user on the server.
-In the general field, messages from your recipient's will appear.
-    After closing the program, the IP, PORT, and Username settings are saved in the configuration file,
-    and are loaded from the config upon the next launch.
+messages will be sent to this IP address.by push SEND button
+
+    If you have server IP writed in qset.ini file, and want make internet connection, at the start, push SYNC button
+    to synchronize with in server and after you can send message. If the second user is offline, then in the message
+    field, upon sending, a note that the message has been saved for his user on the server.
+    In the general field, messages from your recipient's will appear.
+    After closing the program, the IP, PORT, and Username settings have been saves to configuration file,
+    and are loaded from theese config upon the next launch.
 
 For localnet fileexchange (without server) check for you and your pair have symetrical fileport use in qset.ini file
 
