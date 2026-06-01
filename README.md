@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.6 (beta)
+QUANTUM Messenger Pro 0.5.7 (alpha)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -7,12 +7,12 @@ How to use:
 
 In the local base version without a coordination module, you need to find out your opponent's IP, your
     own IP, and communicate it to your opponent for setup.
-    The messenger in this configuration will only work on local networks, which is convenient for enterprises,
+    The messenger in base configuration will work only local networks (in most cases), which is convenient for enterprises,
     including for maintaining the confidentiality of work correspondence and preventing data leaks to the
-	external network.
-	(Actualy you may have internet connection if one of you pair have static external IP)
-In the PRO version, the IP address is obtained by the messenger automatically during synchronization and
-    connection with another user
+    external network.
+    (Actualy you may have internet connection if one of you pair have static external IP)
+In the full package (with server module), the IP address is obtained by the messenger automatically
+    during synchronization and connection with another user
     (sincle now you may use simple or pro pack whorewer you want, all this include there.)
     The program by default uses port 443, therefore messages must be sent to this port.
 
@@ -68,12 +68,13 @@ Advantages of the QUANTUM Messenger:
      performance and stability, a processor with
      4 cores is optimally recommended for the program's operation.
 
-        The messenger is conditionally free for private use.
+        The messenger is conditionally free for personal use.
         If you wish to support the author for future improvements,
         payment details and contact information are in the About section.
 
-  Minimum system requirements:
-  CPU Pentium IV(32bit Willamette core with SSE2 instructions), 512 MB RAM, WindowsXP32
+        Minimum system requirements:
+        CPU Pentium IV(32bit Willamette core with SSE2 instructions), 512 MB RAM, WindowsXP32
+
 ----------------------------------------------------------------------------------------- 
  - New Features
  - Bug fixes
@@ -140,8 +141,11 @@ Changes History:
 
 0.5.6 - voice message function added / ole and some other small bug fix / add buton icons
 
+0.5.7 - code refactoring / extend voicemessage recordtime up to 10 sec / sync rec-play time
+
 ---------- in plan i think made or not:
 
+   - aes256 standart cryptografy
    - chat history local datafile
    - userlist implement/parse data file & restore chat
    - video call's
@@ -150,13 +154,14 @@ Changes History:
 ------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
-        Application window may have freezes and loose control when restart in current aproved p2p session
+    Application window may have freezes and loose control when restart in current aproved p2p session
     (can occur if you receive ping from parthner before first synchronization and/or message exchange)
     (This happens due to a specific behavior related to timer handling and will be fixed
     in future versions). For complete it, restart messenger and make some connection first time or send any message
     to current ip before you receive external ping. (monitor it in logfile)
           Sometimes program may send empty message, it`s ping, which displayed in message window against log window,
     i seek now for this bug..
+
     One client unsuccessfully tries to send messages or a file to another.
     Cause: Additional port blocking on the network route on the opposite side.
     Fix: Send a small file and a message from the non-responding side.
