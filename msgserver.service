@@ -1,0 +1,21 @@
+[Unit]
+Description=Starting msgserver Service
+After=systemd-sysctl.service network.target dbus.service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/msgsrv
+ExecStart=/opt/msgsrv/msgsrv
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=42s
+StartLimitInterval=0
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=msgserver
+
+[Install]
+WantedBy=multi-user.target
