@@ -173,7 +173,10 @@ Changes History:
 Installing a coordination server for work outside the local network
 (The server was tested on CentOS 7):
 
-To install, place the serverXX file in the folder '/opt/msgserver/'
+First faster variant just set chmod 755 and run msgsrv file in terminal this is good for fast
+testing and view debug info in console. (remind for set open incoming client udp port and udp 4443 in firewall)
+
+To complete install, place the msgsrv file in the folder '/opt/msgsrv/'
 
 install MariaDB or some MySQL compatible DB
 
@@ -187,9 +190,9 @@ This address and server ports must be writen in client's qset.ini configuration 
 For permanent server runwork, modify at you own and place 'msgserver.service' template file
 to '/usr/lib/systemd/system/' and install it using the commands:
 
-systemctl enable msgserver
+systemctl enable msgsrv
 
-systemctl start msgserver
+systemctl start msgsrv
 
 The service file is also included (attached in the package); other paths can be configured there as well.
 Ensure the server file has execute permissions: chmod 755.
