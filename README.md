@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.7 (alpha)
+QUANTUM Messenger Pro 0.5.8 (alpha)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -143,9 +143,11 @@ Changes History:
 
 0.5.7 - code refactoring / extend voicemessage recordtime up to 10 sec / sync rec-play time
 
+0.5.8 - aes256 standart cryptography for p2p session mode/ add server commandline ports parameters
+
 ---------- in plan i think made or not:
 
-   - aes256 standart cryptography
+   - add change between two voice communicate mode: radio / post
    - chat history local datafile
    - userlist implement/parse data file & restore chat
    - video call's
@@ -173,8 +175,12 @@ Changes History:
 Installing a coordination server for work outside the local network
 (The server was tested on CentOS 7):
 
+Installing a coordination server for work outside the local network
+(The server was tested on CentOS 7):
+
 First faster variant just set chmod 755 and run msgsrv file in terminal, this is good for fast
-testing and view debug info in console. (At same, don`t forget to set open outbond client udp port and incoming udp 4443 in firewall)
+testing and view debug info in console. (At same, don`t forget to set open outbond client udp
+port and incoming udp 4443 in firewall)
 
 To complete install, place the msgsrv file in the folder '/opt/msgsrv/'
 
@@ -199,3 +205,9 @@ Ensure the server file has execute permissions: chmod 755.
 Upon startup, the server creates two MySQL-format databases in serverfile folder.
 These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
+
+You can use additional custom server commandline arguments:
+-pm (portmessage) -pf (port for fileExchange)
+Example: srvmsg -pm 443 -pf 4443
+Edit msgserver.service with this syntax for freeze you port choise
+Notice: if you change default ports configuration, Don`t forget to change parameters in clients .ini files
