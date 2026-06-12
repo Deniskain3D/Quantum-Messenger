@@ -207,7 +207,11 @@ These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
 
 You can use additional custom server commandline arguments:
+
 -pm (portmessage) -pf (port for fileExchange)
+
 Example: srvmsg -pm 443 -pf 4443
+
 Edit msgserver.service with this syntax for freeze you port choise
+
 Notice: if you change default ports configuration, Don`t forget to change parameters in clients .ini files
