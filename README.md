@@ -144,7 +144,8 @@ Changes History:
 0.5.7 - code refactoring / extend voicemessage recordtime up to 10 sec / sync rec-play time
 
 0.5.8 - aes256 standart cryptography for p2p session mode/ add server commandline ports parameters
-
+        fix small bugs and optimize for more stability, add safe operations behavior in interface buttons
+		
 ---------- in plan i think made or not:
 
    - add change between two voice communicate mode: radio / post
