@@ -162,7 +162,9 @@ Changes History:
     (This happens due to a specific behavior related to timer handling and will be fixed
     in future versions). For complete it, restart messenger and make some connection first time or send any message
     to current ip before you receive external ping. (monitor it in logfile)
-          Sometimes program may send empty message, it`s ping, which displayed in message window against log window,
+	For wan crypted connection, in this time, this issue typical
+          
+		  Sometime, program may send empty message, it`s ping, which displayed in message window against log window,
     i seek now for this bug..
 
     One client unsuccessfully tries to send messages or a file to another.
