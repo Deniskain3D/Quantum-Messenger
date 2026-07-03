@@ -11,21 +11,23 @@ In the local base version without a coordination module, you need to find out yo
     including for maintaining the confidentiality of work correspondence and preventing data leaks to the
     external network.
     (Actualy you may have internet connection if one of you pair have static external IP)
+
 In the full package (with server module), the IP address is obtained by the messenger automatically
     during synchronization and connection with another user
     (sincle now you may use simple or pro pack whorewer you want, all this include there.)
     The program by default uses port 443, therefore messages must be sent to this port.
 
 During operation, the program requests the recipient's IP address from the IP address input field.
+
 By default, the address is set to your local machine 127.0.0.1.
     If immediately after launch you simply write a message in the message composition field, it goes to
     the general list, and you receive an echo response, it means
     the program is operational.
 
 If you are working on a local network, you need to specify the recipient's IP address in the field, after which
-messages will be sent to this IP address.by push SEND button
+    messages will be sent to this IP address.by push SEND button
 
-    If you have server IP writed in qset.ini file, and want make internet connection, at the start, push SYNC button
+If you have server IP writed in qset.ini file, and want make internet connection, at the start, push SYNC button
     to synchronize with in server and after you can send message. If the second user is offline, then in the message
     field, upon sending, a note that the message has been saved for his user on the server.
     In the general field, messages from your recipient's will appear.
@@ -117,9 +119,9 @@ Changes History:
 		For client and server - add user online check and keep alive mode for keep channel to waiting
 		you friend session. Delivery condenced messages for you while you still offline (from server)
 
-0.4.6 -  Some optimization and stability filesend issues fix
+0.4.6 - Some optimization and stability filesend issues fix
 
-0.4.7 -  Bug fix, filesend stability improving
+0.4.7 - Bug fix, filesend stability improving
 
 0.4.8 - Many small changes emproves, stables and fixes for filexchange (add some retryes, etc.)
         add logout info about this
@@ -137,15 +139,16 @@ Changes History:
 
 0.5.5 - filesend deeper error correction / add listbox message clipboard/
         add reply function / textinput bugfix /compact delivery-star to lastmsg/
-		add more text formating accuracy / fix mem alloc interface freeze across separate thread
+        add more text formating accuracy / fix mem alloc interface freeze across separate thread
 
 0.5.6 - voice message function added / ole and some other small bug fix / add buton icons
 
 0.5.7 - code refactoring / extend voicemessage recordtime up to 10 sec / sync rec-play time
 
-0.5.8 - aes256 standart cryptography for p2p session mode/ add server commandline ports parameters
+0.5.8 - aes256 standart cryptography for p2p msg session mode/ add server commandline ports parameters
         fix small bugs and optimize for more stability, add safe operations behavior in interface buttons
-		
+		add save last messenger window position on exit / fix old bug (sometime interface was may freezed after wan connect)
+
 ---------- in plan i think made or not:
 
    - add change between two voice communicate mode: radio / post
@@ -157,12 +160,15 @@ Changes History:
 ------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
-    Application window may have freezes and loose control when restart in current aproved p2p session
+    When possible, don`t use different version for connect, in this time protocols may have big changes
+	because arround zero versions i`m stay in search optimum algos stage
+	
+	Application window may have freezes and loose control when restart in current aproved p2p session
     (can occur if you receive ping from parthner before first synchronization and/or message exchange)
     (This happens due to a specific behavior related to timer handling and will be fixed
     in future versions). For complete it, restart messenger and make some connection first time or send any message
     to current ip before you receive external ping. (monitor it in logfile)
-	          
+              
 		  Sometime, program may send empty message, it`s ping, which displayed in message window against log window,
     i seek now for this bug..
 
@@ -171,7 +177,7 @@ Changes History:
     Fix: Send a small file and a message from the non-responding side.
 
     Lack of connection is also possible due to blocking by internet providers.
-    Solution: Use a VPN with support for the UDP protocol.
+    Solution: Use a VPN with support the UDP protocol.
 
 ------------------------------------------------------------------------------------------------------------------
 Installing a coordination server for work outside the local network
@@ -209,11 +215,9 @@ These can be deleted if necessary, after which the server should be restarted.
 The server also enables deferred message delivery by storing crypted messages in the database until they are sent.
 
 You can use additional custom server commandline arguments:
-
 -pm (portmessage) -pf (port for fileExchange)
 
 Example: srvmsg -pm 443 -pf 4443
 
 Edit msgserver.service with this syntax for freeze you port choise
-
 Notice: if you change default ports configuration, Don`t forget to change parameters in clients .ini files
