@@ -145,7 +145,7 @@ Changes History:
 
 0.5.7 - code refactoring / extend voicemessage recordtime up to 10 sec / sync rec-play time
 
-0.5.8 - aes256 standart cryptography for p2p msg session mode/ add server commandline ports parameters
+0.5.8 - aes256 standart cryptography for msg/voice p2p session mode/ add server commandline ports parameters
         fix small bugs and optimize for more stability, add safe operations behavior in interface buttons
 		add save last messenger window position on exit / fix old bug (sometime interface was may freezed after wan connect)
 
