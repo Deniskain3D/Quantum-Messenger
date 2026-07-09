@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.8 (beta)
+QUANTUM Messenger Pro 0.5.8 (Stable)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
