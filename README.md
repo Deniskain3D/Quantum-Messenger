@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger Pro 0.5.8 (stable)
+QUANTUM Messenger Pro 0.5.9 (alpha)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -145,9 +145,14 @@ Changes History:
 
 0.5.7 - code refactoring / extend voicemessage recordtime up to 10 sec / sync rec-play time
 
-0.5.8 - aes256 standart cryptography for msg/voice p2p session mode/ add server commandline ports parameters
+0.5.8 - AES256 standart cryptography with msg/voice p2p wan/lan session modes (for pro license)
+        Add server commandline ports parameters.
         fix small bugs and optimize for more stability, add safe operations behavior in interface buttons
 		add save last messenger window position on exit / fix old bug (sometime interface was may freezed after wan connect)
+		Restrict sendes filesize to 400 mb for save back-compatibility with XP 512 MB computer configuration and economy PC memory
+		Add extended errorCRC test for fileExchange function
+
+0.5.9 - optimizes/refactoring code up file sendlimit to 10 MB for freeusers
 
 ---------- in plan i think made or not:
 
