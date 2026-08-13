@@ -152,7 +152,7 @@ Changes History:
 		Restrict sendes filesize to 400 mb for save back-compatibility with XP 512 MB computer configuration and economy PC memory
 		Add extended errorCRC test for fileExchange function
 
-0.5.9 - optimizes/refactoring code up file sendlimit to 10 MB for freeusers
+0.5.9 - optimizes/refactoring code up file sendlimit to 100 MB for freeusers
 
 ---------- in plan i think made or not:
 
