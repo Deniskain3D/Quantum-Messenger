@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger 0.5.9 (alpha)
+QUANTUM Messenger 0.5.9 (Beta)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
@@ -152,7 +152,7 @@ Changes History:
 		Restrict sendes filesize to 400 mb for save back-compatibility with XP 512 MB computer configuration and economy PC memory
 		Add extended errorCRC test for fileExchange function
 
-0.5.9 - optimizes/refactoring code up file sendlimit to 100 MB for freeusers
+0.5.9 - optimizes/refactoring code up file sendlimit to 100 MB for freeusers (While Pro func open for testing)
 
 ---------- in plan i think made or not:
 
