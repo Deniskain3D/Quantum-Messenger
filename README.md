@@ -153,6 +153,7 @@ Changes History:
 		Add extended errorCRC test for fileExchange function
 
 0.5.9 - optimizes/refactoring code up file sendlimit to 100 MB for freeusers (While Pro func open for testing)
+        security improves
 
 ---------- in plan i think made or not:
 
