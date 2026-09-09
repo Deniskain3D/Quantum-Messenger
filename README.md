@@ -190,9 +190,6 @@ Changes History:
 Installing a coordination server for work outside the local network
 (The server was tested on CentOS 7):
 
-Installing a coordination server for work outside the local network
-(The server was tested on CentOS 7):
-
 First faster variant just set chmod 755 and run msgsrv file in terminal, this is good for fast
 testing and view debug info in console. (At same, don`t forget to set open outbond client udp
 port and incoming udp 4443 in firewall)
