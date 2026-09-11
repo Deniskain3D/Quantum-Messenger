@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------------------
-QUANTUM Messenger 0.5.9 (Beta)
+QUANTUM Messenger 0.5.9 (Stable)
 ------------------------------------------------------------------------------------------------------
 Download lastest: https://github.com/Deniskain3D/Quantum-Messenger/releases
 
