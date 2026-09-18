@@ -167,9 +167,10 @@ Changes History:
 ------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
-    When possible, don`t use different version for connect, in this time protocols may have big changes
+**While, Do not click to listbox zone on start before send first message! Else interface loose control!**
+	
+	When possible, don`t use different version for connect, in this time protocols may have big changes
 	because arround zero versions i`m stay in search optimum algos stage
-	While Do not click to listbox zone on start before send first message!(interface loose control)
 	Application window may have freezes and loose control when restart in current aproved p2p session
     (can occur if you receive ping from parthner before first synchronization and/or message exchange)
     (This happens due to a specific behavior related to timer handling and will be fixed
