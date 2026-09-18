@@ -154,8 +154,10 @@ Changes History:
 
 0.5.9 - optimizes/refactoring code up file sendlimit to 100 MB for freeusers (While Pro func open for testing)
         security improves / oficial extend message to 1024 symbol and make save formatting text from/to clipboard
-		fix lang locale encoding bug (clipboard text copy from messages list)
+		fix lang locale encoding bug (clipboard text copy from messages list).
+		
 		fix old bug - "Sometime, program may send empty message, it`s ping, which displayed in message window against log window"
+
 ---------- in plan i think made or not:
 
    - add change between two voice communicate mode: radio / post
@@ -169,16 +171,14 @@ Changes History:
 
 **While, Do not click to listbox zone on start before send first message! Else interface loose control!**
 	When possible, don`t use different version for connect, in this time protocols may have big changes
-	because arround zero versions i`m stay in search optimum algos stage
+	because arround zero versions i`m stay in search optimum algos stage.
+
 	Application window may have freezes and loose control when restart in current aproved p2p session
     (can occur if you receive ping from parthner before first synchronization and/or message exchange)
     (This happens due to a specific behavior related to timer handling and will be fixed
     in future versions). For complete it, restart messenger and make some connection first time or send any message
     to current ip before you receive external ping. (monitor it in logfile)
               
-		  Sometime, program may send empty message, it`s ping, which displayed in message window against log window,
-    i seek now for this bug..
-
     One client unsuccessfully tries to send messages or a file to another.
     Cause: Additional port blocking on the network route on the opposite side.
     Fix: Send a small file and a message from the non-responding side.
