@@ -153,9 +153,13 @@ Changes History:
 		Add extended errorCRC test for fileExchange function
 
 0.5.9 - optimizes/refactoring code up file sendlimit to 100 MB for freeusers (While Pro func open for testing)
-        security improves / oficial extend message to 1024 symbol and make save formatting text from/to clipboard
+        security improves / oficial extend message to 1024 symbol and make copy text with formatting from/to clipboard
 		fix lang locale encoding bug (clipboard text copy from messages list).
 		fix old bug - "Sometime, program may send empty message, it`s ping, which displayed in message window against log window"
+		Add uniq filesession id and check it for pass crossection bad packets from possible different users in future.
+        Updade security / Fix loose winXP compatibility
+        fix old bug - loose control on click to message history area when starts, bug
+		
 
 ---------- *in plan i think made or not:*
 
@@ -168,8 +172,6 @@ Changes History:
 ------------------------------------------------------------------------------------------------------------------
  Possible Issues:
 
-**While, Do not click to listbox zone on start before send first message! Else interface loose control!**
-	
     - When possible, don`t use different version for connect, in this time protocols may have big changes
 	because arround zero versions i`m stay in search optimum algos stage.
 
@@ -229,3 +231,4 @@ Example: srvmsg -pm 443 -pf 4443
 
 Edit msgserver.service with this syntax for freeze you port choise
 Notice: if you change default ports configuration, Don`t forget to change parameters in clients .ini files
+
