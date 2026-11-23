@@ -50,7 +50,7 @@ Advantages of the QUANTUM Messenger:
 
   4. No logging of connections, IP addresses, MAC addresses, ID identifiers on a third party.
 
-  5. Message history is not stored (in future versions, this feature can be enabled manually).
+  5. Message history is not stored (in future versions, this feature will can be enable manually).
 
   6. Flexibility in connections: if one port is blocked, another can be used.
 
@@ -231,4 +231,5 @@ Example: srvmsg -pm 443 -pf 4443
 
 Edit msgserver.service with this syntax for freeze you port choise
 Notice: if you change default ports configuration, Don`t forget to change parameters in clients .ini files
+
 
